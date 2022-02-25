@@ -1,6 +1,7 @@
 package com.projeto.betha.projeto.resource;
 
 import com.projeto.betha.projeto.enterprise.EntityNotFoundException;
+import com.projeto.betha.projeto.enterprise.ValidationException;
 import com.projeto.betha.projeto.model.Cliente;
 import com.projeto.betha.projeto.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,13 @@ public class ClienteController extends AbstractResource{
     }
 
     @PostMapping
-    public ClienteDTO create(@Valid @RequestBody Cliente cliente) {
+    public ClienteDTO create(@Valid @RequestBody Cliente cliente) throws ValidationException {
+        List<Cliente> byCpfCnpj = repository.findByCpfCnpj(cliente.getCpfCnpj());
+
+        if (!byCpfCnpj.isEmpty()) {
+            throw new ValidationException("Ops! Cadastro localizado com mesmo CPF/CNPJ!");
+        }
+
         return ClienteDTO.toDTO(repository.save(cliente));
     }
 

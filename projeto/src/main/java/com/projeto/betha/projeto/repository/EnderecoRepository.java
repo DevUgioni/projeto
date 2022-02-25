@@ -8,5 +8,6 @@ import java.util.List;
 
 public interface EnderecoRepository  extends JpaRepository<Endereco, Long> {
     List<Endereco> findByNumeroEndereco(String numero);
+    List<Endereco> findByPrincipal(String principal);
     List<Endereco> findByCliente(Cliente cliente);
 }

@@ -1,6 +1,7 @@
 package com.projeto.betha.projeto.resource;
 
 import com.projeto.betha.projeto.enterprise.EntityNotFoundException;
+import com.projeto.betha.projeto.enterprise.ValidationException;
 import com.projeto.betha.projeto.model.Endereco;
 import com.projeto.betha.projeto.repository.EnderecoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 @RestController
@@ -31,10 +33,9 @@ public class EnderecoController extends AbstractResource{
     }
 
     @PostMapping
-    public EnderecoDTO create(@Valid @RequestBody Endereco endereco) {
+    public EnderecoDTO create(@Valid @RequestBody Endereco endereco){
         return EnderecoDTO.toDTO(repository.save(endereco));
     }
-
 
     @PutMapping("/{id}")
     public Endereco update(@PathVariable(value = "id") Long enderecoId,

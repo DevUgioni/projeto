@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c12e6fdd-f7b8-4270-95b0-b25fa5f6d08a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Template/public/partials/endereco-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Template/public/partials/endereco-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto/src/main/java/com/projeto/betha/projeto/repository/ClienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto/src/main/java/com/projeto/betha/projeto/repository/ClienteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto/src/main/java/com/projeto/betha/projeto/repository/EnderecoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto/src/main/java/com/projeto/betha/projeto/repository/EnderecoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto/src/main/java/com/projeto/betha/projeto/resource/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto/src/main/java/com/projeto/betha/projeto/resource/ClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto/src/main/java/com/projeto/betha/projeto/resource/EnderecoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto/src/main/java/com/projeto/betha/projeto/resource/EnderecoController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="25aJLaTksqEHsDGhBgj07Jdl5kq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c12e6fdd-f7b8-4270-95b0-b25fa5f6d08a" name="Changes" comment="" />
+      <created>1645759208727</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645759208727</updated>
+    </task>
+    <servers />
+  </component>
+</project>
