@@ -1,0 +1,60 @@
+<div ng-controller="EnderecoListController as vm">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h3>Cadastro de Endereços</h3>
+                            </div>
+                            <div class="col-sm-8">
+                                <a class="btn btn-default pull-right btn-lg fa-lg" href="enderecos/new">
+                                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                    <span>Endereço</span>
+                                </a>
+                           
+                                <form class="search" style="position: absolute; width: 200px;">
+                                    <input class="searchTerm" ng-model="vm.busca" placeholder="Pesquisar..." />
+                                    <input class="searchButton" text="Buscar" type="submit" ng-click="vm.buscar()" />
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <table class="table" style="margin-top: 3em">
+                            <thead>
+                                <tr>
+                                    <th>CEP</th>
+                                    <th>LOGRADOURO</th>
+                                    <th>NUMERO</th>
+                                    <th>CLIENTE</th>
+                                    <th>PRINCIPAL</th>
+                                    <th>AÇÕES</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in vm.itens">
+                                    <td>{{item.cep}}</td>
+                                    <td>{{item.logradouro}}</td>
+                                    <td>{{item.numeroEndereco}}</td>
+                                    <td>{{item.cliente.nome}}</td>
+                                    <td>{{item.principal}}</td>
+                                    <td>
+                                        <a type="button" class="btn btn-primary btn-sm" ng-href="{{'/enderecos/' + item.id}}">
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                        </a>
+
+                                        <a type="button" class="btn btn-primary btn-sm" confirmed-click="vm.remover(item)" 
+                                        ng-confirm-click="Deseja excluir o endereço selecionado?">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

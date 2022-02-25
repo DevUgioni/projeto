@@ -1,0 +1,33 @@
+<div>
+    <div ng-controller="TelefoneFormController as vm">
+        <div class="container">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="container">
+                        <h2>{{vm.titulo}}</h2>
+                        <br>
+                        <form class="form">
+                            <div class="form-group col-sm-4">
+                                <label for="numero" class="col-sm-2">Número</label>
+                                <input type="text" class="form-control text-left" ng-model="vm.cadastro.numero" id="numero" placeholder="Insira o telefone">   
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="cliente">Cliente</label><br>
+                                <div ng-controller="ClienteListController as estVM">
+                                    <select name="nome" ng-model="vm.cadastro.cliente.id" class="form-control" id="cliente">
+                                        <option ng-repeat="item in estVM.itens" value={{item.id}}>{{item.id}} - {{item.nome}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-right col-sm-10">
+                                <a href="/telefones" class="btn btn-default btn-lg">Cancelar</a>
+                                <button ng-click="vm.salvar()" type="button" class="btn btn-success btn-lg">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
